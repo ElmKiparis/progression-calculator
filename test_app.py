@@ -1,6 +1,6 @@
 import unittest
 
-from main import get_an, get_summa
+from functions import get_an, get_summa
 
 
 class ProgressionCalculatorTest(unittest.TestCase):
