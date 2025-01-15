@@ -2,7 +2,7 @@ variable "REPOSITORY_URI" {
   type = string
 }
 
-resource "aws_lightsail_container_service" "flask_application" {
+resource "aws_lightsail_container_service" "progression_calculator" {
   name  = "flask-app"
   power = "nano"
   scale = 1
@@ -41,6 +41,6 @@ resource "aws_lightsail_container_service_deployment_version" "flask_app_deploym
     }
   }
   
-  service_name = aws_lightsail_container_service.progression-calculator.name
+  service_name = aws_lightsail_container_service.progression_calculator.name
   
 }
