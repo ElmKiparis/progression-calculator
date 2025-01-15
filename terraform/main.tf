@@ -20,7 +20,7 @@ resource "aws_lightsail_container_service" "flask_application" {
 
 resource "aws_lightsail_container_service_deployment_version" "flask_app_deployment" {
   container {
-    container_name = "flask-application"
+    container_name = "progression-calculator"
     image          = "${var.REPOSITORY_URI}:latest"
     ports = {
       9090 = "HTTP"
@@ -28,7 +28,7 @@ resource "aws_lightsail_container_service_deployment_version" "flask_app_deploym
   }
 
   public_endpoint {
-    container_name = "flask-application"
+    container_name = "progression-calculator"
     container_port = 9090
 
     health_check {
@@ -41,6 +41,6 @@ resource "aws_lightsail_container_service_deployment_version" "flask_app_deploym
     }
   }
   
-  service_name = aws_lightsail_container_service.flask_application.name
+  service_name = aws_lightsail_container_service.progression-calculator.name
   
 }
